@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #102d3f;
+    --secondary-color: #95c1ad;
+    --third-color: #1f5d7e;
+    --fourth-color: #d7b98c;
+    --fifth-color: #e6e6e6;
+}
+
+/* OpenSans - Bold */
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../fonts/Open_Sans/OpenSans-Bold.ttf") format("opentype");
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+/* OpenSans - Bold Italic */
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../fonts/Open_Sans/OpenSans-BoldItalic.ttf")
+    format("opentype");
+    font-weight: 700; /* Bold */
+    font-style: italic;
+}
+
+/* OpenSans Light - Italic */
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../fonts/Open_Sans/OpenSans-LightItalic.ttf") format("truetype");
+    font-weight: 400; /* Regular */
+    font-style: italic;
+}
+
+/* OpenSans Light */
+@font-face {
+    font-family: "OpenSans";
+    src: url("../../fonts/Open_Sans/OpenSans-Light.ttf") format("opentype");
+    font-weight:400;
+    font-style: normal;
+}
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: OpenSans, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------  Prova imatge cursor --------------------------*/
+.cursor-visitar{
+    display: none;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    z-index: 5;
+    pointer-events: none;
+    translate: -46% -39%;
+    animation: rotateVisit 4s linear infinite;
+
+    &.cursor-hover{
+        display: block;
+    }
+
+    & #cursor-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@keyframes rotateVisit {
+    from{
+        transform: rotate(0);
+    } to {
+        transform: rotate(360deg);
+          }
+}
+
+.main__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
