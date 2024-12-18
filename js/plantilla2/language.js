@@ -23,7 +23,7 @@ flags.forEach(flag=>{
 
 async function importLanguage(lang) {
     try{
-        const response = await fetch(`/translations/${lang}.json`)
+        const response = await fetch(`https://raw.githubusercontent.com/Bitanube-Estades/mesas-trigo-videos/refs/heads/main/translations/${lang}.json`)
         return response.json();
     } catch {
         alert('Error al cargar las traducciones');
